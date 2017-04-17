@@ -1,147 +1,304 @@
-body,html{
+/* ヘッダー上部分の装飾です */
+@media print, screen and (min-width: 480px) {
+  body,html{
   width:100vw;
   height:100vh;
-}
-
-
-/* ヘッダー上部分の装飾です */
-header{
-  position:fixed;
-  height:100px;
-  z-index:2;
-}
-.header-top{
-  padding-left:10vw;
-  padding-right:10vw;
-  width:80vw;
-  height:50px;
-  line-height:50px;
-  background-color:#000066;
-  .fa.fa-tags{
+  }
+  header{
+    position:fixed;
+    width:100vw;
+    height:100px;
+    z-index:2;
+  }
+  .header-top{
+    padding-left:10vw;
+    padding-right:10vw;
+    width:80vw;
+    height:50px;
     line-height:50px;
-    color:white;
-    float:left;
-    font-size:40px;
-  }
-  &__service-name{
-    color:white;
-    float:left;
-  }
-  &__inputs{
-    width:400px;
-    text-align:center;
-    float:left;
-    .search{
-      width:300px;
-      height:30px;
-      border-radius:5px;
-    }
-  }
-  &__sns{
-      height:50px;
-      width:10vw;
-      float:right;
+    background-color:#000066;
+    .fa.fa-tags{
       line-height:50px;
-    .fa.fa-twitter-square{
       color:white;
-      font-size:30px;
-      line-height:50px;
+      float:left;
+      font-size:40px;
     }
-    .fa.fa-facebook-square{
+    &__service-name{
       color:white;
-      font-size:30px;
-      margin-left:30px;
+      float:left;
     }
-  }
-}
-
-.header-bottom{
-  padding-left:10vw;
-  padding-right:10vw;
-  width:80vw;
-  height:50px;
-  line-height:50px;
-  background-color:#DDDDDD;
-  &__links{
-    float:left;
-    width:20%;
-    text-align:center;
-  }
-  .contact{
-    color:white;
-    background-color:black;
-  }
-}
-
-.body{
-  width:90vw;
-  height:100vh;
-  padding-top:100px;
-  margin:0 auto;
-  &__left{
-    width:60vw;
-    height:100vh;
-    float:left;
-    .article{
-      width:60vw;
-      height:30vh;
-      margin-top:50px;
-      position:relative;
-      &__image{
-        width:25vw;
-        height:30vh;
-        float:left;
+    &__sns-for-smartphone{
+      display:none;
+    }
+    &__inputs{
+      width:400px;
+      text-align:center;
+      float:left;
+      .search{
+        width:300px;
+        height:30px;
+        border-radius:5px;
       }
-      &__texts{
-        height:25vh;
-        width:30vw;
-        float:left;
-        margin-left:20px;
-        &__title{
-          font-size:20px;
+    }
+    &__sns{
+        height:50px;
+        width:10vw;
+        float:right;
+        line-height:50px;
+      .fa.fa-twitter-square{
+        color:white;
+        font-size:30px;
+        line-height:50px;
+      }
+      .fa.fa-facebook-square{
+        color:white;
+        font-size:30px;
+        margin-left:30px;
+      }
+    }
+  }
+  .toggle{
+   display:none;
+  }
+  .header-bottom{
+    padding-left:10vw;
+    padding-right:10vw;
+    width:80vw;
+    height:50px;
+    line-height:50px;
+    background-color:#DDDDDD;
+    &__links{
+      float:left;
+      width:20%;
+      text-align:center;
+    }
+    .contact{
+      color:white;
+      background-color:black;
+    }
+  }
+
+  .body{
+    width:90vw;
+    height:100vh;
+    padding-top:100px;
+    margin:0 auto;
+    &__left{
+      width:60vw;
+      height:100vh;
+      float:left;
+      .article{
+        width:60vw;
+        height:30vh;
+        margin-top:50px;
+        position:relative;
+        &__image{
+          width:25vw;
+          height:30vh;
+          float:left;
+        }
+        &__texts{
+          height:25vh;
+          width:30vw;
+          float:left;
+          margin-left:20px;
+          &__title{
+            font-size:20px;
+            font-weight:bold;
+          }
+          &__date{
+            margin-top:10px;
+          }
+          &__readmore{
+            float:right;
+            position:absolute;
+            bottom:0;
+            right:0;
+            color:white;
+            padding:5px;
+            border-radius:5px;
+            background-color:#FF9933;
+          }
+        }
+      }
+    }
+    &__right{
+      width:-webkit-calc(30vw - 100px);
+      height:100vh;
+      padding:50px;
+      float:right;
+      .ad{
+        width:310px;
+        height:160px;
+      }
+    }
+    .popular-articles{
+      width:310px;
+      &__title{
+        text-align:center;
+        border-bottom:solid;
+        padding-top:20px;
+      }
+      &__article{
+        margin-top:30px;
+        &__icon{
+          float:left;
+        }
+        &__ranking{
+          font-size:15px;
           font-weight:bold;
         }
-        &__date{
-          margin-top:10px;
+        &__image{
+          width:310px;
+          height:160px;
         }
-        &__readmore{
-          float:right;
-          position:absolute;
-          bottom:0;
-          right:0;
-          color:white;
-          padding:5px;
-          border-radius:5px;
-          background-color:#FF9933;
+        &__text{
+          font-size:15px;
+          clear:left;
         }
       }
     }
   }
-  &__right{
-    width:-webkit-calc(30vw - 100px);
+}
+
+@media screen and ( max-width:480px )
+{
+  body,html{
+    width:100vw;
     height:100vh;
-    padding:50px;
-    float:right;
   }
-  .popular-articles{
-    width:310px;
-    &__title{
-      text-align:center;
-      border-bottom:solid;
-      padding-top:20px;
+  header{
+    position:fixed;
+    height:100px;
+    z-index:2;
+  }
+  .header-top{
+    width:100vw;
+    height:50px;
+    line-height:50px;
+    background-color:#000066;
+    .fa.fa-tags{
+      line-height:50px;
+      color:white;
+      float:left;
+      font-size:40px;
     }
-    &__article{
-      margin-top:30px;
-      &__icon{
-        float:left;
+    &__service-name{
+      color:white;
+      float:left;
+    }
+    &__sns-for-smartphone{
+      float:right;
+      font-size:30px;
+      margin-right:10vw;
+      color:white;
+    }
+    &__inputs{
+      width:100vw;
+      clear:left;
+      background-color:white;
+      .search{
+        width:80vw;
+        height:30px;
+        margin-left:15vw;
+        border-radius:5px;
       }
-      &__ranking{
-        font-size:15px;
-        font-weight:bold;
+    }
+    &__sns{
+      display:none;
+      .fa.fa-twitter-square{
       }
-      &__text{
-        font-size:15px;
-        clear:left;
+      .fa.fa-facebook-square{
+      }
+    }
+  }
+  .toggle{
+    display:block;
+    .menu-bar{
+      font-size:30px;
+      margin:10px;
+    }
+  }
+  .header-bottom{
+    display:none;
+    &__links{
+      width:100vw;
+      height:50px;
+      line-height:50px;
+      text-align:center;
+      background-color:#DDDDDD;
+    }
+    .contact{
+      color:white;
+      background-color:black;
+    }
+  }
+
+  .body{
+    width:100vw;
+    height:100vh;
+    padding-top:100px;
+    &__left{
+      width:100vw;
+      height:100vh;
+      .article{
+        width:100vw;
+        height:40vh;
+        margin-top:20px;
+        position:relative;
+        &__image{
+          width:100vw;
+          height:30vh;
+        }
+        &__texts{
+          height:100vh;
+          width:100vw;
+          &__title{
+            font-size:15px;
+            font-weight:bold;
+          }
+          &__date{
+            margin-top:10px;
+            font-size:10px;
+          }
+          &__readmore{
+            display:none;
+          }
+        }
+      }
+    }
+    &__right{
+      width:100vw;
+      margin-top:200px;
+      .ad{
+        width:100vw;
+        height:30vh;
+      }
+    }
+    .popular-articles{
+      width:100vw;
+      &__title{
+        text-align:center;
+        border-bottom:solid;
+        padding-top:20px;
+      }
+      &__article{
+        margin-top:30px;
+        &__icon{
+          float:left;
+        }
+        &__ranking{
+          font-size:15px;
+          font-weight:bold;
+        }
+        &__image{
+          width:100vw;
+          height:30vh;
+        }
+        &__text{
+          font-size:15px;
+          clear:left;
+        }
       }
     }
   }
