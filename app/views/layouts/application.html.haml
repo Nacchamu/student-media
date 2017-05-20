@@ -8,5 +8,28 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header
+      %div.header-top
+        %i.fa.fa-tags
+        %p.header-top__service-name Media for Student
+        %div.header-top__sns-for-smartphone
+          %i.fa.fa-twitter-square
+          %i.fa.fa-facebook-square
+        %div.header-top__inputs
+          %input{type: 'text', placeholder: '記事を検索する', class: 'search' }
+        %div.header-top__sns
+          = link_to new_article_path do
+            %i.fa.fa-twitter-square
+          = link_to user_session_path do
+            %i.fa.fa-facebook-square
+      %div.toggle
+        %i.fa.fa-bars.menu-bar
+      %ul.header-bottom
+        %li.header-bottom__links トップ
+        %li.header-bottom__links ビジネス
+        %li.header-bottom__links ファッション
+        %li.header-bottom__links スポーツ
+        %li.header-bottom__links.contact お問い合わせ
+
 
     = yield

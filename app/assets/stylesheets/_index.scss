@@ -93,9 +93,11 @@
         margin-top:50px;
         position:relative;
         &__image{
-          width:25vw;
-          height:30vh;
           float:left;
+          object-fit: cover;
+          width: 25vw;;
+          height: 30vh;
+          background-color: #ccc;
         }
         &__texts{
           height:25vh;
@@ -149,8 +151,10 @@
           font-weight:bold;
         }
         &__image{
-          width:310px;
-          height:160px;
+          object-fit: cover;
+          width: 310px;
+          height: 160px;
+          background-color: #ccc;
         }
         &__text{
           font-size:15px;
