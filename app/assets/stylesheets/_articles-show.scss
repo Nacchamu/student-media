@@ -1,0 +1,20 @@
+.body-new{
+  width: 60vw;
+  height: 500px;
+  padding-top: 100px;
+  margin: 0 auto;
+  &__form{
+    &__title{
+      width: 60vw;
+      height: 68px;
+      font-size: 20px;
+    }
+    &__text{
+    }
+    &__thumbnail{
+      &__title{
+        font-size: 20px;
+      }
+    }
+  }
+}

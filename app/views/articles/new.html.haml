@@ -1,0 +1,14 @@
+%div.body-new
+  = form_for @article, html:{class: 'body-new__form', :multipart => true } do |f|
+    = f.text_field :title, class: 'body-new__form__title', placeholder: '記事タイトル（４８字以内）', maxlength: 48
+    = f.cktext_area :text, class: 'body-new__form__text'
+
+    %div.body-new__form__thumbnail
+      %p.body-new__form__thumbnail__title サムネイル画像
+      %div.body-new__form__thumbnail__icon-box
+        %div.body-new__form__thumbnail__icon-box__select
+          %label{for: "thumbnail", class: "fa fa-picture-o fa-5x comment-form__icon" }
+            = f.file_field :thumbnail, id: 'thumbnail', style: 'display: none;', class: "file"
+          %p.body-new__form__thumbnail__icon-box__select__notice +画像を選択
+
+    %input.body-new__form__button{type: "submit", value: "Sent"}/
