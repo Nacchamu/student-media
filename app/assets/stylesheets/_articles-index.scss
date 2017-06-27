@@ -3,6 +3,7 @@
   body,html{
   width:100vw;
   height:100vh;
+  background-color: #E6E6E6;
   }
   header{
     position:fixed;
@@ -16,7 +17,8 @@
     width:80vw;
     height:50px;
     line-height:50px;
-    background-color:#000066;
+    /*background-color:#000066;*/
+    background-color: black;
     .fa.fa-tags{
       line-height:50px;
       color:white;
@@ -42,13 +44,30 @@
     }
     &__sns{
         height:50px;
-        width:10vw;
         float:right;
         line-height:50px;
+      .fa.fa-address-card{
+        color: gray;
+        font-size: 30px;
+        line-height: 50px;
+      }
+      .fa.fa-pencil-square{
+        color: gray;
+        font-size: 30px;
+        line-height: 50px;
+        margin-left: 30px;
+      }
+      .fa.fa-window-close{
+        color: gray;
+        font-size:30px;
+        line-height:50px;
+        margin-left: 30px;
+      }
       .fa.fa-twitter-square{
         color:white;
         font-size:30px;
         line-height:50px;
+        margin-left: 30px;
       }
       .fa.fa-facebook-square{
         color:white;
@@ -66,15 +85,24 @@
     width:80vw;
     height:50px;
     line-height:50px;
-    background-color:#DDDDDD;
+    /*background-color: #999999;*/
+    background-color: white;
+    border-bottom: solid 1px;
     &__links{
       float:left;
+      color: black;
       width:20%;
       text-align:center;
     }
+    &__links:hover{
+      text-decoration:underline;;
+    }
+    &__links-link{
+      text-decoration: none;
+    }
     .contact{
       color:white;
-      background-color:black;
+      background-color: gray;
     }
   }
 
@@ -90,7 +118,9 @@
       .article{
         width:60vw;
         height:30vh;
-        margin-top:50px;
+        padding: 10px;
+        margin-top:30px;
+        background-color: white;
         position:relative;
         &__image{
           float:left;
@@ -104,23 +134,46 @@
           width:30vw;
           float:left;
           margin-left:20px;
-          &__title{
-            font-size:20px;
-            font-weight:bold;
+          &__title-box{
+            height: 90px;
+            &__title-link{
+              text-decoration: none;
+            }
+            &__title{
+              font-size:20px;
+              color: black;
+              font-weight:bold;
+            }
+            &__title:hover{
+              text-decoration:underline;;
+            }
+          }
+          &__text-box{
+            &__text{
+              width: 95%;
+              height: 70px;
+              margin-bottom: 10px;
+              font-size: 15px;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
+              overflow: hidden;
+            }
           }
           &__date{
-            margin-top:10px;
+            float: right;
+            margin-top:15px;
           }
-          &__readmore{
-            float:right;
-            position:absolute;
-            bottom:0;
-            right:0;
-            color:white;
-            padding:5px;
-            border-radius:5px;
-            background-color:#FF9933;
-          }
+        }
+      }
+      .pagination{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        font-size: 17px;
+        text-align: center;
+        span{
+          color: black;
         }
       }
     }
@@ -142,6 +195,7 @@
         padding-top:20px;
       }
       &__article{
+        background-color: white;
         margin-top:30px;
         &__icon{
           float:left;
@@ -229,8 +283,13 @@
       width:100vw;
       height:50px;
       line-height:50px;
+      text-decoration: none;
       text-align:center;
       background-color:#DDDDDD;
+      color: black;
+    }
+    &__links-link{
+      text-decoration: none;
     }
     .contact{
       color:white;
@@ -244,36 +303,48 @@
     padding-top:100px;
     &__left{
       width:100vw;
-      height:100vh;
       .article{
         width:100vw;
-        height:40vh;
-        margin-top:20px;
+        height:45vh;
         position:relative;
         &__image{
-          width:100vw;
-          height:30vh;
+          object-fit: cover;
+          width: 100vw;
+          height: 30vh;
+          background-color: #ccc;
         }
         &__texts{
-          height:100vh;
           width:100vw;
+          &__title-link{
+            text-decoration: none;
+          }
           &__title{
             font-size:15px;
+            color: black;
             font-weight:bold;
+          }
+          &__text{
+            display: none;
           }
           &__date{
             margin-top:10px;
+            margin-right: 10px;
             font-size:10px;
+            float: right;
           }
-          &__readmore{
-            display:none;
-          }
+        }
+      }
+      .pagination{
+        margin-top: 20px;
+        text-align: center;
+        span{
+          color: black;
         }
       }
     }
     &__right{
       width:100vw;
-      margin-top:200px;
+      margin-top:30px;
       .ad{
         width:100vw;
         height:30vh;
@@ -296,8 +367,10 @@
           font-weight:bold;
         }
         &__image{
-          width:100vw;
-          height:30vh;
+          object-fit: cover;
+          width: 100vw;
+          height: 30vh;
+          background-color: #ccc;
         }
         &__text{
           font-size:15px;

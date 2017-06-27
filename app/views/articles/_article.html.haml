@@ -1,0 +1,10 @@
+%div.article
+  %img.article__image{src: article.thumbnail }
+  %div.article__texts
+    %div.article__texts__title-box
+      = link_to article_path(article.id), class: 'article__texts__title-box__title-link' do
+        %p.article__texts__title-box__title= article.title
+    %div.article__texts__text-box
+      %p.article__texts__text-box__text
+        =strip_tags(article.text).gsub(/(\r\n|\r|\n)/, '').gsub(/(\xc2\xa0|\s)+/, '')
+    %p.article__texts__date= article.created_at.strftime('%Y.%m.%d')

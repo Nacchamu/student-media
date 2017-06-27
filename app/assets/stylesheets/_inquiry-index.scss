@@ -1,0 +1,80 @@
+@media print, screen and (min-width: 480px) {
+  .inquiry{
+    width:55vw;
+    margin: 0 auto;
+    padding-top: 150px;
+    .page-header{
+      h1{
+        font-size: 30px;
+      }
+    }
+    .table{
+      .box{
+        margin-top: 20px;
+        clear: left;
+        .title{
+          width: 200px;
+          float: left;
+        }
+        .field{
+          width: 300px;
+        }
+        .field-text{
+          width: 400px;
+          height: 150px;
+        }
+      }
+    }
+    .btn{
+        padding: 5px 20px;
+        font-size: 1.2em;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        float: right;
+        background-color: orange;
+        color: white;
+        border-style: none;
+    }
+  }
+}
+@media screen and ( max-width:480px ){
+  .inquiry{
+    width:90vw;
+    margin: 0 auto;
+    padding-top: 100px;
+    .page-header{
+      h1{
+        font-size: 20px;
+      }
+    }
+    .table{
+      .box{
+        margin-top: 20px;
+        clear: left;
+        .title{
+          width: 200px;
+          float: left;
+        }
+        .field{
+          width: 90vw;
+          border: solid 1px;
+        }
+        .field-text{
+          border: solid;
+          width: 90vw;
+          height: 150px;
+        }
+      }
+    }
+    .btn{
+        padding: 5px 10px;
+        font-size: 1em;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        float: right;
+        background-color: orange;
+        color: #fff;
+        border-style: none;
+    }
+  }
+}

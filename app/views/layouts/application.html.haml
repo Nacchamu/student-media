@@ -3,33 +3,47 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
-    %title StudentMedia
+    %title Diver
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header
       %div.header-top
         %i.fa.fa-tags
-        %p.header-top__service-name Media for Student
+        = link_to root_path do
+          %p.header-top__service-name Diver
         %div.header-top__sns-for-smartphone
           %i.fa.fa-twitter-square
           %i.fa.fa-facebook-square
         %div.header-top__inputs
           %input{type: 'text', placeholder: '記事を検索する', class: 'search' }
-        %div.header-top__sns
-          = link_to new_article_path do
+        - if user_signed_in? && current_user.id === 1
+          %div.header-top__sns
+            = link_to rails_admin.dashboard_path do
+              %i.fa.fa-address-card
+            = link_to new_article_path do
+              %i.fa.fa-pencil-square
+            = link_to destroy_user_session_path, method: :delete do
+              %i.fa.fa-window-close
             %i.fa.fa-twitter-square
-          = link_to user_session_path do
-            %i.fa.fa-facebook-square
+            = link_to user_session_path do
+              %i.fa.fa-facebook-square
+        - else
+          %div.header-top__sns
+            %i.fa.fa-twitter-square
+            = link_to user_session_path do
+              %i.fa.fa-facebook-square
       %div.toggle
         %i.fa.fa-bars.menu-bar
       %ul.header-bottom
-        %li.header-bottom__links トップ
+        = link_to root_path, class: 'header-bottom__links-link' do
+          %li.header-bottom__links トップ
         %li.header-bottom__links ビジネス
         %li.header-bottom__links ファッション
         %li.header-bottom__links スポーツ
-        %li.header-bottom__links.contact お問い合わせ
+        = link_to inquiry_path do
+          %li.header-bottom__links.contact お問い合わせ
 
 
     = yield

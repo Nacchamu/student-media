@@ -1,19 +1,169 @@
-.body-new{
-  width: 60vw;
-  height: 500px;
-  padding-top: 100px;
-  margin: 0 auto;
-  &__form{
-    &__title{
-      width: 60vw;
-      height: 68px;
-      font-size: 20px;
-    }
-    &__text{
-    }
-    &__thumbnail{
+@media print, screen and (min-width: 480px) {
+  .body-show{
+    width:90vw;
+    height:100vh;
+    padding-top:150px;
+    margin:0 auto;
+    &__left{
+      width:60vw;
+      border-top: solid 10px black;
+      background-color: white;
+      float:left;
       &__title{
-        font-size: 20px;
+        font-size: 25px;
+        margin-left: 15px;
+        font-weight: bold;
+      }
+      &__img{
+        float:left;
+        object-fit: cover;
+        width: 60vw;
+        height: 50vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #ccc;
+      }
+      &__text{
+        margin: 15px;
+      }
+      .ad-left{
+        margin-top: 50px;
+        width:310px;
+        height:160px;
+      }
+      .ad-right{
+        margin-top: 50px;
+        margin-left: 50px;
+        width:310px;
+        height:160px;
+      }
+      &__same-categories{
+        margin-top: 50px;
+        border-bottom: 1px solid;
+      }
+    }
+    &__right{
+      width:-webkit-calc(30vw - 100px);
+      height:100vh;
+      padding:50px;
+      float:right;
+      .ad{
+        width:310px;
+        height:160px;
+      }
+      .popular-articles{
+        width:310px;
+        &__title{
+          text-align:center;
+          border-bottom:solid;
+          padding-top:20px;
+        }
+        &__article{
+          margin-top:30px;
+          &__icon{
+            float:left;
+          }
+          &__ranking{
+            font-size:15px;
+            font-weight:bold;
+          }
+          &__image{
+            object-fit: cover;
+            width: 310px;
+            height: 160px;
+            background-color: #ccc;
+          }
+          &__text{
+            font-size:15px;
+            clear:left;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and ( max-width:480px ){
+  .body-show{
+    width:100vw;
+    height:100vh;
+    padding-top:100px;
+    margin:0 auto;
+    &__left{
+      width:95vw;
+      height:100vh;
+      margin: 0 auto;
+      border-top: solid 10px #000066;
+      &__title{
+        font-size: 15px;
+        font-weight: bold;
+      }
+      &__img{
+        object-fit: cover;
+        width: 95vw;
+        height: 30vh;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #ccc;
+      }
+      p{
+        img{
+          width: 50px;
+        }
+      }
+      .ad-left{
+        width: 40vw;
+        height: 15vh;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #ccc;
+      }
+      .ad-right{
+        width: 40vw;
+        height: 15vh;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #ccc;
+      }
+      &__same-categories{
+        text-align: center;
+        border-bottom: 1px solid;
+      }
+    }
+    &__right{
+      display: none;
+      .ad{
+        width:310px;
+        height:160px;
+      }
+      .popular-articles{
+        width:310px;
+        &__title{
+          text-align:center;
+          border-bottom:solid;
+          padding-top:20px;
+        }
+        &__article{
+          margin-top:30px;
+          &__icon{
+            float:left;
+          }
+          &__ranking{
+            font-size:15px;
+            font-weight:bold;
+          }
+          &__image{
+            object-fit: cover;
+            width: 310px;
+            height: 160px;
+            background-color: #ccc;
+          }
+          &__text{
+            font-size:15px;
+            clear:left;
+          }
+        }
       }
     }
   }
