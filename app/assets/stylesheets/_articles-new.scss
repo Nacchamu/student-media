@@ -1,0 +1,30 @@
+.body-new{
+  width: 80vw;
+  height: 500px;
+  padding-top: 150px;
+  margin: 0 auto;
+  &__form{
+    &__title{
+      width: 60vw;
+      height: 68px;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    &__text{
+    }
+    &__thumbnail{
+      &__title{
+        font-size: 20px;
+      }
+    }
+    &__button{
+      padding: 5px 20px;
+      font-size: 1.2em;
+      margin-bottom: 50px;
+      float: right;
+      background-color: orange;
+      color: #fff;
+      border-style: none;
+    }
+  }
+}

@@ -1,23 +1,7 @@
 %div.body
   %div.body__left
-    %div.article
-      %img.article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
-      %div.article__texts
-        %p.article__texts__title 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
-        %p.article__texts__date 2017年4月5日
-        %p.article__texts__readmore READ MORE
-    %div.article
-      %img.article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
-      %div.article__texts
-        %p.article__texts__title 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
-        %p.article__texts__date 2017年4月5日
-        %p.article__texts__readmore READ MORE
-    %div.article
-      %img.article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
-      %div.article__texts
-        %p.article__texts__title 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
-        %p.article__texts__date 2017年4月5日
-        %p.article__texts__readmore READ MORE
+    = render partial: "article", collection: @articles
+    = paginate(@articles)
 
   %div.body__right
     %img.ad{src: "https://lmcom.jp/wp/wp-content/uploads/2017/02/web-study-meeting6.jpg" }
@@ -52,5 +36,3 @@
         %p.popular-articles__article__ranking 5位
         %img.popular-articles__article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
         %p.popular-articles__article__text 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
-
-%footer

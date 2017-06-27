@@ -1,0 +1,29 @@
+%div.inquiry
+  = form_for @inquiry, :url => inquiry_confirm_path do |f|
+    .page-header
+      %h1 お問い合わせ
+    - if @inquiry.errors.any?
+      .alert.alert-danger{:role => "alert"}
+        %strong 入力内容にエラーがあります
+        %ul
+          - @inquiry.errors.each do |attr, msg|
+            %li= msg
+
+    %div.table
+      %div.box
+        %p.title
+          名前
+          %span.text-danger （必須）
+        = f.text_field :name, class: "field"
+
+      %div.box
+        %p.title
+          メールアドレス
+          %span.text-danger （必須）
+        = f.text_field :email, class: "field"
+
+      %div.box
+        %p.title お問い合わせ内容
+        = f.text_area :message, class: "field-text"
+    = f.submit '送信', class: 'btn btn-primary'
+

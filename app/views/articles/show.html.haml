@@ -1,53 +1,44 @@
-%header
-  %div.header-top
-    %i.fa.fa-tags
-    %p.header-top__service-name Media for Student
-    %input{type: 'text', placeholder: '記事を検索する', class: 'search' }
-    %input{type: 'submit', value: '検索する'}
-    %div.header-top__sns
-      %i.fa.fa-twitter-square
-      %i.fa.fa-facebook-square
-  %ul.header-bottom
-    %li.header-bottom__links トップ
-    %li.header-bottom__links ビジネス
-    %li.header-bottom__links ファッション
-    %li.header-bottom__links スポーツ
-    %li.header-bottom__links.contact お問い合わせ
-
-%div.body
-  %div.body__left
+%div.body-show
+  %div.body-show__left
+    %p.body-show__left__title= @article.title
+    %img.body-show__left__img{src: @article.thumbnail}
+    %div.body-show__left__text
+      != @article.text
+    %img.ad-left{src: "https://lmcom.jp/wp/wp-content/uploads/2017/02/web-study-meeting6.jpg" }
+    %img.ad-right{src: "https://lmcom.jp/wp/wp-content/uploads/2017/02/web-study-meeting6.jpg" }
+    / %p.body-show__left__same-categories 同じカテゴリーの人気記事
 
 
-  %div.body__right
-    %img.ad{width:'310px', height:'160px' ,src: "https://lmcom.jp/wp/wp-content/uploads/2017/02/web-study-meeting6.jpg" }
+  %div.body-show__right
+    %img.ad{src: "https://lmcom.jp/wp/wp-content/uploads/2017/02/web-study-meeting6.jpg" }
     %div.popular-articles
       %p.popular-articles__title 人気記事ランキング
       %div.popular-articles__article
         %i.fa.fa-star-o.popular-articles__article__icon
         %p.popular-articles__article__ranking 1位
-        %img.popular-articles__article__image{width:'310px', height:'160px' ,src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
+        %img.popular-articles__article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
         %p.popular-articles__article__text 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
 
       %div.popular-articles__article
         %i.fa.fa-star-o.popular-articles__article__icon
         %p.popular-articles__article__ranking 2位
-        %img.popular-articles__article__image{width:'310px', height:'160px' ,src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
+        %img.popular-articles__article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
         %p.popular-articles__article__text 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
 
       %div.popular-articles__article
         %i.fa.fa-star-o.popular-articles__article__icon
         %p.popular-articles__article__ranking 3位
-        %img.popular-articles__article__image{width:'310px', height:'160px' ,src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
+        %img.popular-articles__article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
         %p.popular-articles__article__text 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
 
       %div.popular-articles__article
         %i.fa.fa-star-o.popular-articles__article__icon
         %p.popular-articles__article__ranking 4位
-        %img.popular-articles__article__image{width:'310px', height:'160px' ,src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
+        %img.popular-articles__article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
         %p.popular-articles__article__text 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
 
       %div.popular-articles__article
         %i.fa.fa-star-o.popular-articles__article__icon
         %p.popular-articles__article__ranking 5位
-        %img.popular-articles__article__image{width:'310px', height:'160px' ,src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
+        %img.popular-articles__article__image{src: "http://tk.ismcdn.jp/mwimgs/c/e/570/img_ce9e9197e8c71adb4da2bf07a589c2ae192733.jpg" }
         %p.popular-articles__article__text 日本の大学を中退し、単身タイのタマサート大学へ !! 東南アジアに恋した大学生のリアル
